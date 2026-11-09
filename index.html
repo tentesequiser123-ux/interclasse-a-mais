@@ -1,1 +1,89 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INTERCLASSE A+ | 8º ANO</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#080d18;color:white;font-family:Arial,sans-serif}
+header{padding:22px 8%;display:flex;justify-content:space-between;align-items:center;background:#0c1425;border-bottom:1px solid #183b70}
+.logo{font-size:23px;font-weight:900;color:#39a9ff}
+nav a{color:white;text-decoration:none;margin-left:18px}
+.hero{text-align:center;padding:85px 20px;background:radial-gradient(circle at center,#123b70,#080d18 70%)}
+.hero h1{font-size:48px;margin:0;color:#42aaff}
+.hero p{color:#c5d8ee;font-size:18px}
+button{background:#1688ed;color:white;border:0;border-radius:9px;padding:14px 22px;font-weight:bold;cursor:pointer}
+section{padding:45px 8%;max-width:1100px;margin:auto}
+h2{color:#42aaff}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.card{background:#111d32;border:1px solid #203e68;border-radius:13px;padding:22px}
+.card h3{color:#56b5ff}
+form{background:#111d32;padding:25px;border-radius:14px;border:1px solid #244878;max-width:550px}
+input,textarea{width:100%;padding:13px;margin:9px 0 17px;border:1px solid #31527e;border-radius:8px;background:#080f1d;color:white}
+label{font-weight:bold}
+small{color:#a9bad0}
+footer{text-align:center;padding:25px;color:#879bb5}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">INTERCLASSE A+</div>
+<nav>
+<a href="#esportes">Esportes</a>
+<a href="#solicitar">Entrar no grupo</a>
+</nav>
+</header>
 
+<div class="hero">
+<h1>INTERCLASSE A+</h1>
+<h2>8º ANO</h2>
+<p>União, respeito e competição!</p>
+<a href="#solicitar"><button>Solicitar entrada</button></a>
+</div>
+
+<section id="esportes">
+<h2>MODALIDADES ESPORTIVAS</h2>
+<div class="cards">
+<div class="card"><h3>⚽ FUTSAL</h3><p>EM PROGRESSO...</p></div>
+<div class="card"><h3>🏐 VÔLEI</h3><p>EM PROGRESSO...</p></div>
+<div class="card"><h3>💪 CABO DE GUERRA</h3><p>EM PROGRESSO...</p></div>
+</div>
+</section>
+
+<section id="solicitar">
+<h2>Solicitação de entrada no grupo</h2>
+<p>O site é público, mas o grupo é privado. Envie sua solicitação e aguarde a análise do administrador.</p>
+
+<form name="solicitacao-entrada" method="POST" data-netlify="true" netlify-honeypot="campo-oculto">
+<input type="hidden" name="form-name" value="solicitacao-entrada">
+<p class="hidden"><label>Não preencha:<input name="campo-oculto"></label></p>
+
+<label>Seu nome:</label>
+<input type="text" name="nome" placeholder="Digite seu nome" required>
+
+<label>Seu e-mail:</label>
+<input type="email" name="email" placeholder="Seu e-mail" required>
+
+<label>Mensagem para o administrador:</label>
+<textarea name="mensagem" rows="5" placeholder="Olá, gostaria de solicitar minha entrada no grupo..." required></textarea>
+
+<button type="submit">ENVIAR SOLICITAÇÃO</button>
+</form>
+<p><small>O envio não garante aprovação. Aguarde a resposta do administrador.</small></p>
+</section>
+
+<section>
+<h2>Grupo privado</h2>
+<div class="card">
+<p>🔒 Área exclusiva para participantes aprovados.</p>
+<p>O acesso ao chat será liberado somente depois da aprovação do administrador.</p>
+</div>
+</section>
+
+<footer>INTERCLASSE A+ — 8º ANO<br>Respeito, união e espírito esportivo.</footer>
+</body>
+</html>
+```
